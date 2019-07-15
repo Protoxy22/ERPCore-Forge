@@ -1,7 +1,6 @@
 package erp.forge.core.network;
 
 import erp.forge.core.ERPCoreForge;
-import erp.forge.core.network.message.MessageWhistleRequest;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
