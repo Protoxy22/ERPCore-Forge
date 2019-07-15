@@ -25,7 +25,7 @@ public class ERPCoreForge {
     public static ERPCoreForge instance;
 
     //here you must specify the path to the folder where the proxy files are located
-   	@SidedProxy(serverSide = "erp.forge.core.proxy.CommonProxy")
+   	@SidedProxy(clientSide = "erp.forge.core.proxy.ClientProxy", serverSide = "erp.forge.core.proxy.CommonProxy")
    	public static CommonProxy proxy;
 
 
