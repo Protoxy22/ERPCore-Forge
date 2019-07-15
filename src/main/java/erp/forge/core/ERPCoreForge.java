@@ -2,6 +2,7 @@ package erp.forge.core;
 
 import erp.forge.core.common.commands.CommandTest;
 import erp.forge.core.network.PacketHandler;
+import erp.forge.core.pluginmessage.PluginMessageManager;
 import erp.forge.core.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +24,7 @@ public class ERPCoreForge {
     public static Logger logger;
 
     private SimpleNetworkWrapper erpCoreForgePacketChannel;
+    private static PluginMessageManager manager = new PluginMessageManager();
 
     @Mod.Instance
     public static ERPCoreForge instance;
@@ -34,6 +36,9 @@ public class ERPCoreForge {
 
     public SimpleNetworkWrapper getPacketChannel() {
         return this.erpCoreForgePacketChannel;
+    }
+    public static PluginMessageManager getPluginMessageManager() {
+        return manager;
     }
 
     @EventHandler
