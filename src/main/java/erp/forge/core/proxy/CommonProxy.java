@@ -4,7 +4,6 @@ import erp.forge.core.common.CommonEvents;
 import erp.forge.core.datamanager.ERPlayer;
 import erp.forge.core.datamanager.ERPlayerDataStorage;
 import erp.forge.core.datamanager.IERPlayer;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
