@@ -4,15 +4,13 @@ import net.minecraft.entity.player.EntityPlayer;
 
 public interface IERPlayer {
 
-    void setPlayer(EntityPlayer player);
+    void setFirstname(String firstName);
 
-    void setFirstName(String firstName);
+    String getFirstname();
 
-    String getFirstName();
+    void setLastname(String lastName);
 
-    void setLastName(String lastName);
-
-    String getLastName();
+    String getLastname();
 
     void setJob(String jobname);
 

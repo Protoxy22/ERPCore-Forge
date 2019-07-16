@@ -35,7 +35,7 @@ public class CommandTest extends CommandBase {
 
             ERPlayer ierPlayer = ERPlayerProvider.getERPlayer(player);
 
-            player.sendMessage(new TextComponentString(ierPlayer.getFirstName()+" "+ierPlayer.getLastName()));
+            player.sendMessage(new TextComponentString(ierPlayer.getFirstname()+" "+ierPlayer.getLastname()));
         }
     }
 

@@ -1,73 +1,84 @@
 package erp.forge.core.datamanager;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
 
 public class ERPlayer implements IERPlayer {
 
 
-    private EntityPlayer player;
+    private String firstname;
+    private String lastname;
+    private String job;
+    private int money;
+    private int bank;
 
-
-    public void setPlayer(EntityPlayer player) {
-        this.player = player;
+    @Override
+    public String getFirstname() {
+        return this.firstname;
     }
 
-    public void setFirstName(String firstName) {
-        player.getDataManager().set(ERPlayerProvider.FIRST_NAME, firstName);
+    @Override
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getFirstName() {
-        return player.getDataManager().get(ERPlayerProvider.FIRST_NAME);
+    @Override
+    public String getLastname() {
+        return this.lastname;
     }
 
-    public void setLastName(String lastName) {
-        player.getDataManager().set(ERPlayerProvider.LAST_NAME, lastName);
+    @Override
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getLastName() {
-        return player.getDataManager().get(ERPlayerProvider.LAST_NAME);
-    }
-
-    public void setJob(String jobname) {
-        player.getDataManager().set(ERPlayerProvider.JOB, jobname);
-    }
-
+    @Override
     public String getJob() {
-        return player.getDataManager().get(ERPlayerProvider.JOB);
+        return this.job;
     }
 
-    public void setMoney(int money) {
-        player.getDataManager().set(ERPlayerProvider.MONEY, money);
+    @Override
+    public void setJob(String job) {
+        this.job = job;
     }
 
+    @Override
     public int getMoney() {
-        return player.getDataManager().get(ERPlayerProvider.MONEY);
+        return this.money;
     }
 
+    @Override
     public void addMoney(int money) {
-        player.getDataManager().set(ERPlayerProvider.MONEY, this.getMoney() + money);
+        setMoney(getMoney()+money);
     }
 
+    @Override
     public void removeMoney(int money) {
-        player.getDataManager().set(ERPlayerProvider.MONEY, this.getMoney() - money);
+        setMoney(getMoney()-money);
     }
 
-    public void setBank(int money) {
-        player.getDataManager().set(ERPlayerProvider.BANK, money);
+    @Override
+    public void setMoney(int money) {
+        this.money = money;
     }
 
+    @Override
     public int getBank() {
-        return player.getDataManager().get(ERPlayerProvider.BANK);
+        return this.bank;
     }
 
+    @Override
     public void addBank(int money) {
-        player.getDataManager().set(ERPlayerProvider.BANK, this.getBank() + money);
+        setMoney(getBank()+money);
+
     }
 
+    @Override
     public void removeBank(int money) {
-        player.getDataManager().set(ERPlayerProvider.BANK, this.getBank() - money);
+        setMoney(getBank()-money);
+
+    }
+
+    @Override
+    public void setBank(int bank) {
+        this.bank = bank;
     }
 }
